@@ -7,7 +7,7 @@
 
         <script>
             $(document).ready(function(){
-
+                $.sub.enableDebugger();
                 test("Should have one subscription after subscribing", function(){
                     $.sub.reset()
                     expect(1);
