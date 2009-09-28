@@ -38,7 +38,7 @@ jQuery.sub = {
     _debug : function($obj){
         if(!this.options.debug) {return;}
         if (window.console && window.console.log){
-            window.console.log('[' + new Date() + '] sub.bus', $obj)
+            window.console.log('[%s - sub.bus]',new Date(), $obj)
         }
     }
 };
