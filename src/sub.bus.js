@@ -9,8 +9,9 @@ jQuery.sub = {
         $(document).data("subs", []);
     },
     getSubscriptions:function(){
-        this._debug('getting subscriptions');
-        return $(document).data("subs");
+        subscriptions = $(document).data("subs");
+        this._debug({subscriptions:subscriptions});
+        return subscriptions;
     },
     subscribe:function(event, callback) {
         this._debug({'subscribing' : event, callback : callback});
@@ -28,8 +29,10 @@ jQuery.sub = {
     },
     enableDebugger : function(){
         this.options.debug = true;
+        this._debug('DEBUGGING ENABLED');
     },
     disableDebugger : function(){
+        this._debug('DISABLING DEBUGGER');
         this.options.debug = false;
     },
     _debug : function($obj){
